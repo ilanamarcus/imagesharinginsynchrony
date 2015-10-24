@@ -1,0 +1,17 @@
+<html>
+	<head>
+		<title>ImageSend - upload scan</title>
+	</head>
+	<body>
+		<h1>Upload image</h1>
+		<form id="upload-image" name="upload-image" enctype="multipart/form-data" method="post" action="/upload">
+			<label for="fname">First Name: </label><input type="text" id="fname" name="fname"/><br/>
+			<label for="lname">Last Name: </label><input type="text" id="lname" name="lname"/><br/>
+			<label for="dob">Date of Birth: </label><input type="text" id="dob" name="dob"/><br/>			
+			<label for="imagefile">Image File:</lable><input type="file" id="imagefile" name="imagefile"/><br/>
+			<label for="dest">Destination Hospital:</label><input type="text" id="dest" name="dest"/><br/>
+			<input type="submit" id="submit" value="Upload file"/><br>
+		</form>
+	</body>
+</html>
+
