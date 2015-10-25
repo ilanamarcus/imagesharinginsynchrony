@@ -21,39 +21,81 @@
   <body>
     
 	<div class="container" >
-		 <nav class="navbar navbar-default">
-        <div class="container-fluid">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">Image Sharing In Synchrony</a>
-          </div>
-          <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-             
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-              
-            </ul>
-          </div><!--/.nav-collapse -->
-        </div><!--/.container-fluid -->
-      </nav>
-		<div class="jumbotron">
+		<nav class="navbar navbar-default navbar-fixed-top">
+		    <div class="container-fluid">
+		      <div class="navbar-header">
+		        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+		          <span class="sr-only">Toggle navigation</span>
+		          <span class="icon-bar"></span>
+		          <span class="icon-bar"></span>
+		          <span class="icon-bar"></span>
+		        </button>
+		        <a class="navbar-brand" href="#">Image Sharing In Synchrony</a>
+		      </div>
+		      <div id="navbar" class="navbar-collapse collapse">
+		        <ul class="nav navbar-nav">
+		         
+		        </ul>
+		        <ul class="nav navbar-nav navbar-right">
+		          
+		        </ul>
+		      </div><!--/.nav-collapse -->
+		    </div><!--/.container-fluid -->
+      	</nav>
+
 			<h3>Upload image</h3>
-		
-			<form class="form-signin" id="upload-image" name="upload-image" enctype="multipart/form-data" method="post" action="/upload">
-				<input class="form-control" type="text" id="fname" name="fname" placeholder="First name"/><br/>
-				<input class="form-control" type="text" id="lname" name="lname" placeholder="Last name"/><br/>
-				<input class="form-control" type="text" id="dob" name="dob" placeholder="Date of birth (MMDDYYYY)"/><br/>			
-				<input class="form-control" type="file" id="imagefile" name="imagefile"/><br/>
-				<input class="form-control" type="text" id="dest" name="dest" placeholder="File destination"/><br/>
-				<input class="form-control" type="submit" id="submit" value="Upload file"/><br>
+			
+			
+			<form class="form-horizontal">
+				<fieldset>
+
+				<!-- Form Name -->
+				<legend>Upload Image</legend>
+
+				<!-- Text input-->
+				<div class="form-group">
+				  <label class="col-md-4 control-label" for="textinput">First name</label>  
+				  <div class="col-md-4">
+				  <input id="fname" name="fname" type="text" placeholder="" class="form-control input-md">
+				  </div>
+				</div>
+
+				<!-- Text input-->
+				<div class="form-group">
+				  <label class="col-md-4 control-label" for="textinput">Last name</label>  
+				  <div class="col-md-4">
+				  <input id="lname" name="lname" type="text" placeholder="" class="form-control input-md">
+				  </div>
+				</div>
+
+				<!-- Text input-->
+				<div class="form-group">
+				  <label class="col-md-4 control-label" for="textinput">DOB</label>  
+				  <div class="col-md-4">
+				  <input id="dob" name="dob" type="text" placeholder="Format: MMDDYYYY" class="form-control input-md">
+				  </div>
+				</div>
+
+				<!-- File Button --> 
+				<div class="form-group">
+				  <label class="col-md-4 control-label" for="filebutton">File Button</label>
+				  <div class="col-md-4">
+					<input id="imagefile" name="imagefile" class="input-file" type="file">
+				  </div>
+				</div>
+
+				<!-- Button -->
+				<div class="form-group">
+				  <label class="col-md-4 control-label" for="singlebutton">Single Button</label>
+				  <div class="col-md-4">
+					<button id="singlebutton" name="singlebutton" class="btn btn-primary">Submit</button>
+				  </div>
+				</div>
+
+				</fieldset>
 			</form>
-		</div>
+			
+
 	</div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
