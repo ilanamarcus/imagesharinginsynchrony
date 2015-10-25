@@ -50,7 +50,7 @@ router.post('/upload', function(req, res, next) {
 	}); 
 	
 	
-	res.send("uploaded file.");
+	res.render("confirmUploaded");
 });
 
 module.exports = router;
