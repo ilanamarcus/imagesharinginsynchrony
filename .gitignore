@@ -36,4 +36,4 @@ npm-debug.log
 uploads
 
 # Downloaded files
-downloads
+downloads/*
