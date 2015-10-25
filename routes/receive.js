@@ -53,9 +53,12 @@ router.get('/images/:key', function(req, res, next) {
 	
 		var filename = './downloads/' + img_id;
 		var file = fs.createWriteStream(filename);
-		s3.getObject({Key: img_id}).createReadStream().pipe(file);
+		var stream = s3.getObject({Key: img_id}).createReadStream().pipe(file);
+		
+		stream.on('finish', function(){
+			res.download(filename);
+		});
 	
-		res.download(filename);
 	} catch (err) {
 		console.log(err);
 		next(err);
