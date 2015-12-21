@@ -35,7 +35,7 @@ router.post('/upload', function(req, res, next) {
 	
 	fs.readFile(req.file.path, function(err, buffer){
 		var params = {
-			Key: util.format("%s:%s:%s:%s", req.body.fname, req.body.lname, req.body.dob, req.body.dest),
+			Key: util.format("%s:%s:%s", req.body.fname, req.body.lname, req.body.dob),
 			Body: buffer
 		};
 		

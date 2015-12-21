@@ -26,7 +26,6 @@ router.get('/images', function(req, res, next) {
 			var fname = nameParts[0];
 			var lname = nameParts[1];
 			var dob = nameParts[2];
-			var dest = nameParts[3];
 
 			var row = [];
 			row.push(fname);
